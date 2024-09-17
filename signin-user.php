@@ -25,10 +25,10 @@ if (isset($_POST['submit'])) {
             exit(); 
         }
          else {
-            echo "Unknown role";
+            echo "user not found";
         }
     } else {
-        echo "User not found";
+        echo "no data found";
     }
 } else {
     echo "Invalid request";

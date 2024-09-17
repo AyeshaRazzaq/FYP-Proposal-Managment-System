@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         $query = "INSERT INTO user (`name`, email, cnic, `password` , contactno, regno, delegation, `role`) VALUES ('$name', '$email', '$cnic', '$password' ,'$contactno', '$regno', '$delegation', '$role')";
 
         if(mysqli_query($connection, $query)) {
-            $_SESSION['data-inserted'] = "Data inserted successfully";
+            $_SESSION['data-inserted'] = "User Added successfully!";
             if ($role === 'student') {
                 header('Location: students.php');
                 
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
                 header('Location: admin-dashboard.php');
             }
         } else {
-            $_SESSION['not_insert'] = "Data not inserted";
+            $_SESSION['not_insert'] = "Data not inserted!";
         }
     } else {
         $_SESSION['required'] = "Please enter all the required fields";
